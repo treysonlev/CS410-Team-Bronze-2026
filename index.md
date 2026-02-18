@@ -6,10 +6,10 @@ This is the website for CS410 Team Bronze 2026
 
 - Trey Leverett
 
--
+- Ayden Garcia
 
--
+- Cameron Zell
 
--
+- Riley Reynolds
 
--
+- James Moore
