@@ -1,0 +1,127 @@
+/* Basic stuff */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+/* navbar style */
+.navbar {
+    background-color: #ffffff;
+    border-bottom: 2px solid #e0e0e0;
+    padding-top: 10px;
+}
+
+.nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-logo {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #8c1511;
+    padding-bottom: 10px;
+}
+
+/* tab style */
+.nav-tab {
+    text-decoration: none;
+    color: #666;
+    padding: 12px 20px;
+    border: 1px solid transparent;
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+    transition: all 0.3s ease;
+}
+
+.nav-tabs {
+    display: flex;
+    gap: 5px;
+}
+
+.nav-tab:hover {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+.nav-tab.active {
+    background-color: #fff;
+    color: #007bff;
+    border-color: #e0e0e0;
+    border-bottom: 2px solid #fff; 
+    margin-bottom: -2px; 
+    font-weight: bold;
+}
+
+/* Content Area */
+.content {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    line-height: 1.6;
+}
+
+
+/* Stuff for our bios */
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.team-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    width: 300px; 
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.member-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.member-info {
+    padding: 20px;
+}
+
+.member-info h3 {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.member-role {
+    color: #007bff;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.member-bio {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
+}
