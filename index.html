@@ -5,50 +5,160 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redflag</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
     <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-logo">Redflag</div>
-            <a href="index.html" class="nav-tab active">Home</a>
-            <a href="pages/about.html" class="nav-tab">About</a>
-            <a href="pages/bio.html" class="nav-tab">Team Bio</a>
-            <a href="pages/presentations.html" class="nav-tab">Presentations</a>
-            <a href="pages/deliverables.html" class="nav-tab">Deliverables</a>
-            <a href="pages/references.html" class="nav-tab">References</a>
-            <a href="pages/glossary.html" class="nav-tab">Glossary</a>
+            <a href="index.html" class="nav-logo">
+                <img src="content/images/redflag_logo.png" alt="Redflag Logo">
+                Redflag
+            </a>
+            <div class="nav-tabs">
+                <a href="index.html" class="nav-tab active">Home</a>
+                <a href="pages/bio.html" class="nav-tab">Team Bio</a>
+                <a href="pages/presentations.html" class="nav-tab">Presentations</a>
+                <a href="pages/deliverables.html" class="nav-tab">Deliverables</a>
+                <a href="pages/references.html" class="nav-tab">References</a>
+                <a href="pages/glossary.html" class="nav-tab">Glossary</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark/Light Mode">
+                    <i class="fas fa-sun"></i>
+                </button>
+            </div>
         </div>
     </nav>
 
-    <main class="content">
+    <header class="hero">
+        <img src="content/images/redflag_logo.png" alt="Redflag Logo">
         <h1>Redflag</h1>
         <p>The future of fact checking.</p>
-        <br>
-        <h2> <a href="pages/about.html">About</a> </h2>
-        <p>About this project.</p>
-        <br>
-        <h2> <a href="pages/bio.html">Team Bio</a> </h2>
-        <p>About the team behind this project.</p>
-        <br>
-        <h2> <a href="pages/presentations.html">Presenations</a> </h2>
-        <p>Presentations on our project.</p>
-        <br>
-        <h2> <a href="pages/deliverables.html">Deliverables</a> </h2>
-        <p>Our project's deliverables.</p>
-        <br>
-        <h2> <a href="pages/references.html">References</a> </h2>
-        <p>References used for our project.</p>
-        <br>
-        <h2> <a href="pages/glossary.html">Glossary</a> </h2>
-        <p>Key word definitions.</p>
-        <br>
-        <h2>External Links</h2>
-        <p><a href="http://www.odu.edu/">Old Dominion University</a></p>
-        <p><a href="http://www.cs.odu.edu/">Old Dominion University Computer Science</a></p>
-        
+    </header>
 
+    <!-- Animated Navigation Grid -->
+    <div class="section-wrapper">
+        <section class="animated-grid">
+            <a href="pages/bio.html" class="animated-card">
+                <h3>Team Bio</h3>
+                <p>Meet the team behind the project</p>
+            </a>
+            <a href="pages/presentations.html" class="animated-card">
+                <h3>Presentations</h3>
+                <p>View our project presentations</p>
+            </a>
+            <a href="pages/deliverables.html" class="animated-card">
+                <h3>Deliverables</h3>
+                <p>Explore our project deliverables</p>
+            </a>
+            <a href="pages/references.html" class="animated-card">
+                <h3>References</h3>
+                <p>See our research sources</p>
+            </a>
+            <a href="pages/glossary.html" class="animated-card">
+                <h3>Glossary</h3>
+                <p>Key terms and definitions</p>
+            </a>
+        </section>
+    </div>
+
+    <main>
+        <div class="section-wrapper">
+            <div class="content-box">
+                <h1>About</h1>
+                <h2>Problem Statement</h2>
+                <p>The fact checking tools of today are either too niche or bothersome to tackle this misinformation epidemic. Despite the vastly popular concern regarding digital inaccuracy, social media users frequently propagate misinformation because existing verification methods are inconvenient and require active user intervention.</p>
+                <div class="divider"></div>
+
+                <h2>Problem Characteristics</h2>
+                
+                <h3>Inconvenience and Disconnected Verification</h3>
+                <p>Fact-checking often requires manual searching outside the platform. Users simply don't verify information because it takes too much effort.</p>
+                
+                <h3>Lack of Credibility Awareness</h3>
+                <p>Users receive no real-time credibility signals while browsing. Without active warnings, credibility is often assumed by default.</p>
+                
+                <h3>No Motivation to Verify</h3>
+                <p>Platforms and algorithms encourage instant sharing with one click, while verifying claims may take minutes. Rationally, users choose not to spend this time and effort.</p>
+                
+                <h3>Lack of Universal Tool</h3>
+                <p>Many existing verification tools are platform-specific and not unified. For example: Community notes on X, NewsGuard for news sites, L.L.M.'s when manually provided context.</p>
+                
+                <h3>Algorithms Reinforce Bias</h3>
+                <p>User’s algorithms feed them content they inherently agree with which makes misinformation easier to spread.</p>
+            </div>
+        </div>
+
+        <div class="section-wrapper">
+            <div class="content-box">
+                <h2>Solution Statement</h2>
+                <p>RedFlag is a cross-platform fact checking (RedFlag) and bias indicator (BaisStar) running behind the scenes to tackle misinformation. When users are consuming the news any inaccuracies will be marked instantly with credible sources upon request, to prevent the unknowing spread of misinformation in today's information age. Furthermore on politically divisive issues RedFlag will star the content and offer different viewpoints from the left, right, and center at the users choosing.</p>
+                <div class="divider"></div>
+
+                <h2>Solution Characteristics</h2>
+                
+                <h3>Convenience and Verification</h3>
+                <p>Fact-checking is quick and painless, requiring little input from the user.</p>
+                
+                <h3>Awareness of Credibility</h3>
+                <p>Users are actively informed of the credibility of sources they view while they’re browsing.</p>
+                
+                <h3>Easily Accessible, Unprompted and Instant Verification</h3>
+                <p>Users are warned and informed before sharing potentially false claims, discouraging impulsive sharing.</p>
+                
+                <h3>One Universal Tool</h3>
+                <p>A general tool for uncovering misinformation, no matter where the user browses.</p>
+                
+                <h3>Sharing different points of view</h3>
+                <p>Users are provided with a multitude of sources leaning in different areas of the political spectrum.</p>
+            </div>
+        </div>
+        
+        <div class="section-wrapper">
+            <div class="content-box">
+                <h2>Design Principles</h2>
+                <p>RedFlag is built on principles that prioritize user autonomy and unbiased information.</p>
+                
+                <h3>Unbiased Political Alignment</h3>
+                <p>RedFlag supports decision-making without dictating it. It does not act as a final authority on truth but provides evidence-based evaluation from multiple sources and perspectives on disputed topics.</p>
+                
+                <h3>Comparison & Context</h3>
+                <p>Optional context is provided upon the user's request. It highlights questionable information immediately as it is presented on screen.</p>
+                
+                <h3>Uninterrupted Flow</h3>
+                <p>Pop-ups interrupt the user's browsing experience. RedFlag uses highlighting text, which is significantly less intrusive, maintaining the user's natural browsing flow.</p>
+            </div>
+        </div>
+
+        <div class="section-wrapper">
+            <div class="content-box">
+                <h2>Who Does This Affect?</h2>
+                <h3>Teens & Young Adults</h3>
+                <p><span class="stat-highlight">85%</span> of young people now get their news primarily from social media.</p>
+                
+                <h3>Older Adults (55+)</h3>
+                <p>On Twitter/X, <span class="stat-highlight">80%</span> of fake news was shared by users over age 50.</p>
+                
+                <h3>Everyday Users</h3>
+                <p>Everyday users of the internet are our audience. RedFlag helps them quickly discern misinformation they come across on the web. Customers may include any companies or non-profits interested in combatting misinformation.</p>
+            </div>
+        </div>
     </main>
 
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>External Links</h4>
+                <div class="footer-links">
+                    <a href="http://www.odu.edu/">Old Dominion University</a>
+                    <a href="http://www.cs.odu.edu/">Old Dominion University Computer Science</a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 Redflag Team. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

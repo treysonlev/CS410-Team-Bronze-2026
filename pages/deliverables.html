@@ -5,50 +5,132 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redflag</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
     <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-logo">Redflag</div>
-            <a href="../index.html" class="nav-tab">Home</a>
-            <a href="about.html" class="nav-tab">About</a>
-            <a href="bio.html" class="nav-tab">Team Bio</a>
-            <a href="presentations.html" class="nav-tab">Presenations</a>
-            <a href="deliverables.html" class="nav-tab active">Deliverables</a>
-            <a href="references.html" class="nav-tab">References</a>
-            <a href="glossary.html" class="nav-tab">Glossary</a>
+            <a href="../index.html" class="nav-logo">
+                <img src="../content/images/redflag_logo.png" alt="Redflag Logo">
+                Redflag
+            </a>
+            <div class="nav-tabs">
+                <a href="../index.html" class="nav-tab">Home</a>
+                <a href="bio.html" class="nav-tab">Team Bio</a>
+                <a href="presentations.html" class="nav-tab">Presentations</a>
+                <a href="deliverables.html" class="nav-tab active">Deliverables</a>
+                <a href="references.html" class="nav-tab">References</a>
+                <a href="glossary.html" class="nav-tab">Glossary</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark/Light Mode">
+                    <i class="fas fa-sun"></i>
+                </button>
+            </div>
         </div>
     </nav>
 
-    <main class="content">
-            <h1>Deliverables</h1>
-            <br>
-            <h2>Problem Process Flow</h2>
-            <img src="../content/images/problemFlow.png"
-                 alt="Problem flow chart"
-                 width="1000" height="600">
-            <br>
-            <h2>Solution Process Flow</h2>
-            <img src="../content/images/solutionFlow.png"
-                 alt=Solution flow chart"
-                 width="1000" height="600">
-            <br>
-            <h2>Major Functional Components Diagram (MFCD)</h2>
-            <img src="../content/images/mfcd.png" alt="Major Functional Components Diagram">
-            <br>
-            <h2>Competition Matrix</h2>
-            <img src="../content/images/competitorMatrix.png" alt="Competition Matrix">
-            <br>
-            <h2>Risk Matrices</h2>
-            <img src="../content/images/legalRisk.png" alt="Legal Risk Matrix">
-            <img src="../content/images/userRisk.png" alt="User Risk Matrix">
-            <img src="../content/images/technicalRisk.png" alt="Technical Risk Matrix">
+    <main>
+        <div class="section-wrapper">
+            <div class="content-box">
+                <h1>Deliverables</h1>
+                
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <h2>Problem Process Flow</h2>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <img src="../content/images/problemFlow.png" alt="Problem flow chart">
+                        </div>
+                    </div>
 
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <h2>Solution Process Flow</h2>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <img src="../content/images/solutionFlow.png" alt="Solution flow chart">
+                        </div>
+                    </div>
 
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <h2>Major Functional Components Diagram (MFCD)</h2>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <img src="../content/images/mfcd.png" alt="Major Functional Components Diagram">
+                        </div>
+                    </div>
 
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <h2>Competition Matrix</h2>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <img src="../content/images/competitorMatrix.png" alt="Competition Matrix">
+                        </div>
+                    </div>
 
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <h2>Risk Matrices</h2>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <h3>Legal Risk</h3>
+                            <img src="../content/images/legalRisk.png" alt="Legal Risk Matrix">
+                            <h3>User Risk</h3>
+                            <img src="../content/images/userRisk.png" alt="User Risk Matrix">
+                            <h3>Technical Risk</h3>
+                            <img src="../content/images/technicalRisk.png" alt="Technical Risk Matrix">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>External Links</h4>
+                <div class="footer-links">
+                    <a href="http://www.odu.edu/">Old Dominion University</a>
+                    <a href="http://www.cs.odu.edu/">Old Dominion University Computer Science</a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 Redflag Team. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script>
+        // Simple accordion functionality
+        document.querySelectorAll('.accordion-header').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const isActive = button.classList.contains('active');
+                
+                // Close all other accordions
+                document.querySelectorAll('.accordion-header').forEach(b => {
+                    b.classList.remove('active');
+                    b.nextElementSibling.style.maxHeight = null;
+                    b.querySelector('i').style.transform = 'rotate(0deg)';
+                });
+
+                if (!isActive) {
+                    button.classList.add('active');
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    button.querySelector('i').style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+    </script>
 </body>
 </html>

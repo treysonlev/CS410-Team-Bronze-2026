@@ -3,31 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redflag</title>
+    <title>Redflag - Glossary</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
     <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-logo">Redflag</div>
-            <a href="../index.html" class="nav-tab">Home</a>
-            <a href="about.html" class="nav-tab">About</a>
-            <a href="bio.html" class="nav-tab">Team Bio</a>
-            <a href="presentations.html" class="nav-tab">Presentations</a>
-            <a href="deliverables.html" class="nav-tab">Deliverables</a>
-            <a href="references.html" class="nav-tab">References</a>
-            <a href="glossary.html" class="nav-tab active">Glossary</a>
+            <a href="../index.html" class="nav-logo">
+                <img src="../content/images/redflag_logo.png" alt="Redflag Logo">
+                Redflag
+            </a>
+            <div class="nav-tabs">
+                <a href="../index.html" class="nav-tab">Home</a>
+                <a href="bio.html" class="nav-tab">Team Bio</a>
+                <a href="presentations.html" class="nav-tab">Presentations</a>
+                <a href="deliverables.html" class="nav-tab">Deliverables</a>
+                <a href="references.html" class="nav-tab">References</a>
+                <a href="glossary.html" class="nav-tab active">Glossary</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark/Light Mode">
+                    <i class="fas fa-sun"></i>
+                </button>
+            </div>
         </div>
     </nav>
 
-    <main class="content">
-            <h1>Glossary</h1>
-            <h2>Friction</h2>
-            <p>Something that causes an application to not be seamless while working.</p>
-            <h2>LLM</h2>
-            <p>A Large Language Model (also known as a ChatBot) such as ChatGPT, Gemini, or Claude.</p>
+    <main>
+        <div class="section-wrapper">
+            <div class="content-box">
+                <h1>Glossary</h1>
+                
+                <h2>Friction</h2>
+                <p>Something that causes an application to not be seamless while working.</p>
+                
+                <h2>L.L.M.</h2>
+                <p>A Large Language Model (also known as a ChatBot) such as ChatGPT, Gemini, or Claude.</p>
+                
+                <h2>Misinformation</h2>
+                <p>False information that is spread, regardless of whether there is intent to mislead.</p>
+                
+                <h2>Disinformation</h2>
+                <p>Deliberately misleading or biased information; manipulated narrative or propaganda.</p>
+                
+                <h2>End-user</h2>
+                <p>The person who ultimately uses or is intended to use a computer system or software application.</p>
+                
+                <h2>Troll</h2>
+                <p>A person who posts inflammatory, insincere, creating discord, or off-topic messages in an online community.</p>
+            </div>
+        </div>
     </main>
 
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>External Links</h4>
+                <div class="footer-links">
+                    <a href="http://www.odu.edu/">Old Dominion University</a>
+                    <a href="http://www.cs.odu.edu/">Old Dominion University Computer Science</a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 Redflag Team. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
 </body>
 </html>
