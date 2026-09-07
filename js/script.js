@@ -24,4 +24,21 @@ document.addEventListener('DOMContentLoaded', () => {
             icon.className = 'fas fa-sun';
         }
     });
+
+    // Nav dropdown (Labs)
+    document.querySelectorAll('.nav-tab.dropdown').forEach(dropdown => {
+        const toggle = dropdown.querySelector('.dropdown-toggle');
+        toggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = dropdown.classList.contains('open');
+            document.querySelectorAll('.nav-tab.dropdown.open').forEach(d => d.classList.remove('open'));
+            if (!isOpen) {
+                dropdown.classList.add('open');
+            }
+        });
+    });
+
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.nav-tab.dropdown.open').forEach(d => d.classList.remove('open'));
+    });
 });

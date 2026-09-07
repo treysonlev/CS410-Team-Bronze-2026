@@ -166,6 +166,83 @@ body {
     background-color: rgba(183, 28, 28, 0.1);
 }
 
+/* Nav Dropdown (Labs) */
+.nav-tab.dropdown {
+    position: relative;
+    padding: 0;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: none;
+    border: none;
+    font-family: inherit;
+    color: var(--text-color);
+    text-decoration: none;
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: var(--transition);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.dropdown-toggle:hover {
+    background-color: rgba(183, 28, 28, 0.05);
+    color: var(--primary-color);
+}
+
+.dropdown-toggle.active {
+    color: var(--primary-color);
+    background-color: rgba(183, 28, 28, 0.1);
+}
+
+.dropdown-toggle i {
+    font-size: 0.75rem;
+    transition: transform 0.2s ease;
+}
+
+.nav-tab.dropdown.open .dropdown-toggle i {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 160px;
+    margin-top: 4px;
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    z-index: 1001;
+}
+
+.nav-tab.dropdown.open .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 16px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.dropdown-menu a:hover {
+    background-color: rgba(183, 28, 28, 0.05);
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
 /* Hero Section (for Home Page) */
 .hero {
     background: transparent; 
